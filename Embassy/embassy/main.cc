@@ -1,7 +1,7 @@
 #include <iostream>
-#include "lib/test.h"
+#include "rpc/test.h"
 
 int main() {
-    int ans = 1;
+    int ans = 10;
     std::cout << add42(ans) << std::endl;
 }

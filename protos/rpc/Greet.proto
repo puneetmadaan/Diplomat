@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package embassy;
+
+service Greet {
+    rpc SayHi (request) returns (response) {}
+}
+
+message request {
+    string name = 1;
+    string age = 2;
+}
+
+message response {
+    string response = 1; 
+} 
+
+
