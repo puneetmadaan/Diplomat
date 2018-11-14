@@ -1,3 +1,6 @@
+package(default_visibility = ["//visibility:public"])
+
+
 cc_library(
     name = "test",
     srcs = ["test.cc"],

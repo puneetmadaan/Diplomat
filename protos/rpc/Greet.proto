@@ -3,15 +3,16 @@ syntax = "proto3";
 package embassy;
 
 service Greet {
-    rpc SayHi (request) returns (response) {}
+    rpc SayHi (GreetRequest) returns (GreetResponse) {}
+    rpc CoupleSayHello (GreetRequest) returns (GreetResponse) {}
 }
 
-message request {
+message GreetRequest {
     string name = 1;
     string age = 2;
 }
 
-message response {
+message GreetResponse {
     string response = 1; 
 } 
 

@@ -5,3 +5,6 @@ bazel-*
 # Maven
 target/
 build/
+
+#protobuf
+*.pb.*
