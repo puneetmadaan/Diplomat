@@ -2,4 +2,5 @@
 
 
 -----
-A gRPC based library provides a solution to interact between 64 bit and 32 bit binaries.
+A gRPC based library provides a solution to execute some code snippet in another process without glue code.
+Example: call a 32 bit legacy library from a 64 bit application by Diplomat just like direct call.
