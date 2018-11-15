@@ -1,7 +1,16 @@
 #include <iostream>
 #include "rpc/test.h"
 
+#include <grpcpp/grpcpp.h>
+#include "greeter.h"
+
+
 int main() {
-    int ans = 10;
-    std::cout << add42(ans) << std::endl;
+  GreeterClient greeter(grpc::CreateChannel(
+      "localhost:50051", grpc::InsecureChannelCredentials()));
+  std::string user("world");
+  std::string reply = greeter.SayHi(user);
+  std::cout << "Greeter received: " << reply << std::endl;
+
+  return 0;
 }

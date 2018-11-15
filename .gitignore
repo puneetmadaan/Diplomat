@@ -1,10 +1,14 @@
 .DS_Store
 bazel-*
 .bazelrc
-.idea
+
 # Maven
 target/
 build/
 
-#protobuf
+# Editor
+.vscode/
+.idea/
+
+# Protobuf
 *.pb.*
