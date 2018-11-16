@@ -15,7 +15,7 @@ load("@com_github_grpc_grpc//bazel:cc_grpc_library.bzl", "cc_grpc_library")
 cc_grpc_library(
     name = "greet_cc_proto",
     srcs = ["greet.proto",],
-    proto_only = True,
+    proto_only = False,
     deps = [],
     well_known_protos = True,
 )
