@@ -1,5 +1,4 @@
 #include <iostream>
-#include "rpc/test.h"
 
 #include <grpcpp/grpcpp.h>
 #include "greeter.h"
