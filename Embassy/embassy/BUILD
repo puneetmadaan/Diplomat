@@ -6,8 +6,8 @@ cc_library(
     hdrs = ["test.h"],
 )
 
-cc_library(
-    name = "greeter",
+(
+    name = "grecc_libraryeter",
     srcs = ["greeter.cc"],
     hdrs = ["greeter.h"],
 )
@@ -17,8 +17,10 @@ cc_binary(
     name = "main",
     srcs = ["main.cc"],
     deps = [
-        ":greeter",
+        "@com_github_grpc_grpc//:grpc++_public_hdrs",
         "//protos:greet_cc_grpc",
+        ":greeter",
     ],
+    includes = ["grpcpp/grpcpp.h"],
 )
 

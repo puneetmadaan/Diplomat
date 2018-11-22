@@ -1,5 +1,7 @@
 .DS_Store
-bazel-*
+
+# bazel generates
+bazel-*/
 .bazelrc
 
 # Maven
@@ -12,3 +14,4 @@ build/
 
 # Protobuf
 *.pb.*
+

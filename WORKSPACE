@@ -1,7 +1,7 @@
-git_repository(
+http_archive(
     name = "com_github_grpc_grpc",
-    remote = "https://github.com/grpc/grpc.git",
-    tag = "v1.16.1",
+    url = "https://github.com/grpc/grpc/archive/a933c40e679c5aef7107e7561e827cd12a1008e0.tar.gz",
+    strip_prefix = "grpc-a933c40e679c5aef7107e7561e827cd12a1008e0",
 )
 
 git_repository(

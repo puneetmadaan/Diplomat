@@ -26,6 +26,6 @@ grpc_proto_library(
     name = "greet_cc_grpc",
     srcs = ["greet.proto",],
     deps = [],
-    has_services = False,
+    has_services = True,
     well_known_protos = True,
 )
