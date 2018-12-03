@@ -6,7 +6,7 @@ http_archive(
 
 git_repository(
     name = "com_google_protobuf",
-    remote = "https://github.com/google/protobuf.git",
+    remote = "https://github.com/protocolbuffers/protobuf.git",
     # strip_prefix = "protobuf-3.6.1",
     tag = "v3.6.1",
 )
@@ -18,11 +18,6 @@ new_http_archive(
     build_file = "gtest.BUILD",
 )
 
-git_repository(
-    name = "org_pubref_rules_protobuf",
-    remote = "https://github.com/pubref/rules_protobuf.git",
-    tag = "v0.8.2",
-)
 
 load("@com_github_grpc_grpc//bazel:grpc_deps.bzl", "grpc_deps")
 

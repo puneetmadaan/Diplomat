@@ -2,13 +2,8 @@
 #include <memory>
 #include <string>
 
-#include <include/grpcpp/grpcpp.h>
-
-#ifdef BAZEL_BUILD
-#include "../protos/greeter.grpc.pb.h"
-#else
-#include "greet.grpc.pb.h"
-#endif
+#include <grpcpp/grpcpp.h>
+#include "protos/greet.grpc.pb.h"
 
 using grpc::Server;
 using grpc::ServerBuilder;

@@ -1,4 +1,5 @@
 package(default_visibility = ["//visibility:public"])
+load("@com_github_grpc_grpc//bazel:cc_grpc_library.bzl", "cc_grpc_library")
 
 cc_library(
     name = "test",
@@ -6,10 +7,14 @@ cc_library(
     hdrs = ["test.h"],
 )
 
-(
-    name = "grecc_libraryeter",
-    srcs = ["greeter.cc"],
+cc_library(
+    name = "greeter",
     hdrs = ["greeter.h"],
+    srcs = ["greeter.cc"],
+    deps = [
+        "//protos:greeter_cc_grpc",
+        "@com_github_grpc_grpc//:grpc++",
+    ],
 )
 
 # https://docs.bazel.build/versions/master/be/c-cpp.html#cc_binary
@@ -17,10 +22,16 @@ cc_binary(
     name = "main",
     srcs = ["main.cc"],
     deps = [
-        "@com_github_grpc_grpc//:grpc++_public_hdrs",
-        "//protos:greet_cc_grpc",
         ":greeter",
+        "@com_github_grpc_grpc//:grpc++",
     ],
-    includes = ["grpcpp/grpcpp.h"],
 )
 
+cc_binary(
+    name = "server",
+    srcs = ["greetServer.cc"],
+    deps = [
+        "//protos:greeter_cc_grpc",
+        "@com_github_grpc_grpc//:grpc++",
+    ]
+)
