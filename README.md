@@ -1,5 +1,6 @@
 # Diplomat
 
+[![Build Status](https://travis-ci.com/GarfieldZHU/Diplomat.svg?branch=master)](https://travis-ci.com/GarfieldZHU/Diplomat#)
 
 -----
 
